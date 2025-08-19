@@ -22,3 +22,25 @@ javascript
 function calculateMargin(cost, price) {
     return ((price - cost) / cost * 100).toFixed(2);
 }
+
+
+
+
+les captures 
+
+
+
+deuxiemme captures codes fonction: 
+
+
+function calculateProfitMargin(cost, price) {
+    if (isNaN(cost) || isNaN(price)) return 'Veuillez entrer des nombres valides !';
+    if (cost <= 0) return 'Le coût doit être supérieur à 0 !';
+
+    const profitMargin = ((price - cost) / cost) * 100;
+    const roundedMargin = profitMargin.toFixed(2);
+
+    if (profitMargin > 0) return `Marge bénéficiaire : ${roundedMargin}% (Profit)`;
+    if (profitMargin === 0) return `Marge bénéficiaire : ${roundedMargin}% (Équilibre)`;
+    return `Marge bénéficiaire : ${roundedMargin}% (Perte)`;
+}
