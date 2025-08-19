@@ -80,7 +80,7 @@ Formulaire initial vide avant toute saisie, montrant le début du projet avec le
 
 ### image du capture
 
-<img width="1837" height="934" alt="Capture d’écran du 2025-08-19 09-08-17" src="https://github.com/user-attachments/assets/4bb29d02-f005-4885-950d-250a8fededfa" />
+<img width="1837" height="934" alt="Capture d’écran du 2025-08-19 10-50-46" src="https://github.com/user-attachments/assets/4919aa1b-6e91-4589-ab86-cb02823d8d4c" />
 
 ### Deuxième partie du marge
 Formulaire prêt à recevoir les valeurs avec le JavaScript actif pour le calcul.
