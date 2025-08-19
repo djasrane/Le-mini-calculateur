@@ -15,9 +15,9 @@ Outil web permettant aux agriculteurs de calculer automatiquement leur marge bé
 
 ## Réponses pédagogiques
 
-#### Pourquoi utiliser une fonction pour le calcul ?
+#### Ont utiliser une fonction pour le calcul 
 
-On utilise une fonction pour que le calcul soit réutilisable et bien organisé.
+parce qu'une fonction pour que le calcul soit réutilisable et bien organisé.
 
 Par exemple :
 
@@ -27,12 +27,14 @@ Si on change la formule du calcul, on n’a qu’à modifier la fonction une seu
 Exemple concret :
 
 calculateProfitMargin(1000, 1500); => Marge : 50% (Profit)
+
 calculateProfitMargin(1000, 1000); => Marge : 0% (Équilibre)
+
 calculateProfitMargin(1500, 1000); => Marge : -33.33% (Perte)
 
 La fonction garde le code propre, clair et facile à comprendre, même si le projet devient plus grand.
 
-#### 2.Quelles conditions pour afficher le message selon la marge ?
+#### 2.Les conditions pour afficher le message selon la marge 
 
 Si la marge est positive => afficher : “Profit” 
 
