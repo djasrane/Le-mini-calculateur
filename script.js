@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('calculator-form');
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Empêche le rechargement de la page
+        e.preventDefault();
         calculateProfitMargin();
     });
 });
@@ -25,7 +25,7 @@ function calculateProfitMargin() {
     const profitMargin = ((price - cost) / cost) * 100;
     const roundedMargin = profitMargin.toFixed(2);
 
-    // Affichage dynamique avec couleur
+    // Affichage des pourcentages 
     if (profitMargin > 0) {
         resultDiv.innerHTML = `Marge bénéficiaire : <span class="profit">${roundedMargin}%</span> (Profit)`;
     } else if (profitMargin === 0) {
