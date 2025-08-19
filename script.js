@@ -1,24 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const calculateBtn = document.getElementById('calculate-btn');
-    calculateBtn.addEventListener('click', calculateProfitMargin);
+    const form = document.getElementById('calculator-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche le rechargement de la page
+        calculateProfitMargin();
+    });
 });
 
 function calculateProfitMargin() {
-    // Récupération des valeurs
-    const costInput = document.getElementById('cost');
-    const priceInput = document.getElementById('price');
+    const cost = parseFloat(document.getElementById('cost').value);
+    const price = parseFloat(document.getElementById('price').value);
     const resultDiv = document.getElementById('result');
-    
-    const cost = parseFloat(costInput.value);
-    const price = parseFloat(priceInput.value);
 
-    // Validation des entrées
+    // Validation
     if (isNaN(cost) || isNaN(price)) {
-        resultDiv.innerHTML = ' Veuillez entrer des nombres valides !';
+        resultDiv.innerHTML = 'Veuillez entrer des nombres valides !';
         return;
     }
     if (cost <= 0) {
-        resultDiv.innerHTML = ' Le coût doit être supérieur à 0 !';
+        resultDiv.innerHTML = 'Le coût doit être supérieur à 0 !';
         return;
     }
 
@@ -26,7 +25,7 @@ function calculateProfitMargin() {
     const profitMargin = ((price - cost) / cost) * 100;
     const roundedMargin = profitMargin.toFixed(2);
 
-    // Affichage du résultat avec style approprié
+    // Affichage dynamique avec couleur
     if (profitMargin > 0) {
         resultDiv.innerHTML = `Marge bénéficiaire : <span class="profit">${roundedMargin}%</span> (Profit)`;
     } else if (profitMargin === 0) {
